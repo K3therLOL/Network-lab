@@ -1,0 +1,114 @@
+\chapter{Интеллектуальные сетевого оборудования функции управляемого сетевого оборудования}
+\label{ch:chap5}
+
+Перед началом выполнения первой части лабораторной работы была выполнена инициализация виртуального окружения лабороторной работы с помощью виртуального эмулятора PNETLab.
+
+Цель данного этапа - изучить принципы работы управляемого сетевого оборудования, смоделировать атаки канального уровня и освоить базовые механизмы защиты локальной сети, такие как Port Security, DHCP Snooping и Dynamic ARP Inspection.
+
+\section{Подготовка к выполнению}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{screenshots/0_1.jpg}
+    \caption{Установка рабочего окружения}
+    \label{fig:0_1}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{screenshots/0_2.jpg}
+    \caption{Вход в рабочее окружение}
+    \label{fig:0_2}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{screenshots/0_3.jpg}
+    \caption{Создание новой лабороторной работы}
+    \label{fig:0_3}
+\end{figure}
+\clearpage
+
+\section{Конфигурация узлов локальной сети}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_1.jpg}
+    \caption{Воспроизведённая топология локальной сети}
+    \label{fig:1_0}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_2.jpg}
+    \caption{Установка ip-адреса локального узла Kali}
+    \label{fig:1_2}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_4.jpg}
+    \caption{Установка ip-адреса <<обычного>> узла}
+    \label{fig:1_4}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_5.jpg}
+    \caption{Проверка доступности узла <<жертвы>> из узла <<атакующего>>}
+    \label{fig:1_5}
+\end{figure}
+\clearpage
+
+\section{Воспроизведение атаки MAC-spoofing}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_6.jpg}
+    \caption{Получение MAC-адреса узла <<жертвы>>}
+    \label{fig:1_6}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_7.jpg}
+    \caption{Подмена MAC-адреса узла <<атакующего>> на MAC-адрес узла <<жертвы>>}
+    \label{fig:1_7}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_9.jpg}
+    \caption{Создание трафика между <<обычным>> узлом и узлом <<жертвой>>}
+    \label{fig:1_9}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_10.jpg}
+    \caption{Анализ ранее созданного трафика с помощью утилиты Wireshark}
+    \label{fig:1_10}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_11.jpg}
+    \caption{Создание обманывающего трафика между узлом <<атакующим>> и узлом <<жертвой>>}
+    \label{fig:1_11}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_12.jpg}
+    \caption{Перезаписи таблицы коммутатора Switch2}
+    \label{fig:1_12}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{screenshots/1_13.jpg}
+    \caption{Отбросы кадров на <<обычном>> узле из-за перезаписи MAC-адреса <<атакующим>> узлом}
+    \label{fig:1_13}
+\end{figure}
+\clearpage
+
+\section{Выводы по главе}
+
+\endinput
